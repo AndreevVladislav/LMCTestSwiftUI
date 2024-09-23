@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GenericResponse<T: Codable>: Codable {
+struct GenericResponse<T: Decodable>: Decodable {
     let total: Int
     let totalPages: Int
     let items: [T]

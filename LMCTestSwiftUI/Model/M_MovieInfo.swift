@@ -8,7 +8,7 @@
 import Foundation
 
 // MARK: - модель информации о фильме
-struct M_MovieInfo: Codable {
+struct M_MovieInfo: Decodable {
     let kinopoiskId: Int
     
     /// Название

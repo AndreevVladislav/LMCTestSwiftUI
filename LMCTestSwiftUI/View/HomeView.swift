@@ -230,6 +230,7 @@ struct HomeView: View {
                                         posterUrl: "",
                                         posterUrlPreview: "")
             ]
+        
         }
     }
 }

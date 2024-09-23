@@ -9,10 +9,9 @@ import Foundation
 import UIKit
 
 // MARK: структура для парсинга фильмов в таблицах
-public struct M_Movie: Identifiable, Codable {
+public struct M_Movie: Identifiable, Decodable {
     
-    public var id: UUID = UUID();
-    
+    public var id: Int { kinopoiskId }
     /// ID фильма
     public let kinopoiskId: Int
     public let imdbId: String?
@@ -48,17 +47,13 @@ public struct M_Movie: Identifiable, Codable {
 }
 
 // MARK: - Country
-public struct Country: Identifiable, Codable {
-    
-    public var id: UUID = UUID();
+public struct Country:  Decodable {
     
     public let country: String
 }
 
 // MARK: - Genre
-public struct Genre: Identifiable, Codable{
-    
-    public var id: UUID = UUID();
+public struct Genre: Decodable{
     
     public let genre: String
 }
